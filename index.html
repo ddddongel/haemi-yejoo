@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>3조 코시국 클럽</title>
+   <script>
+        alert( '코시국 클럽에 입장하시겠습니까?' );
+       </script>
+   <style>
+      body{margin: 10px; background: #d0d0d0;}
+      #myCanvas{background: #fff; border: #909090 1px solid;}
+   </style>
+</head>
+
+<body>
+   <canvas id="myCanvas" width="800" height="800">canvas를 지원하지 않습니다.</canvas>
+   <script>
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext("2d");
+      var r,g,b,size;
+       
+        function animate(){
+        
+         for(var x = 0; x < canvas.width; x = x+60){
+         r = Math.round(Math.random()*255);
+              g = Math.round(Math.random()*255);
+             b = Math.round(Math.random()*255);
+             a = Math.random(); //불투명도 조절//
+            size = Math.round(Math.random()*30+5);
+             
+          for(var y = 0; y < canvas.height; y = y+80){
+            context.fillStyle= "rgba("+r+","+g+","+b+","+a+")";
+            context.fillRect(x, y, 60, 80); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+      for(var x = 0; x < canvas.width; x = x+60){
+         for(var y = 0; y < canvas.height; y = y+80){
+            context.fillStyle= "black";
+            context.fillRect(x, y, 30, 80); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+      for(var x = 0; x < canvas.width; x = x+60){
+         r = Math.round(Math.random()*255);
+              g = Math.round(Math.random()*255);
+             b = Math.round(Math.random()*255);
+             a = Math.random(); //불투명도 조절//
+            size = Math.round(Math.random()*30+5);
+          
+          for(var y = 0; y < canvas.height; y = y+160){
+            context.fillStyle= "rgba("+r+","+g+","+b+","+a+")";
+            context.fillRect(x, y+20, 30, 60); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+      for(var x = 0; x < canvas.width; x = x+60){
+         for(var y = 0; y < canvas.height; y = y+160){
+            context.fillStyle= "black";
+            context.fillRect(x+30, y+100, 30, 60); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }      
+
+      for(var x = 0; x < canvas.width; x = x+60){
+         for(var y = 0; y < canvas.height; y = y+80){
+            context.fillStyle= "white";
+            context.fillRect(x+15, y+40,15, 40); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+
+      for(var x = 0; x < canvas.width; x = x+60){
+         for(var y = 0; y < canvas.height; y = y+80){
+            context.fillStyle= "blue";
+            context.fillRect(x+30, y+40, 15, 40); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+      for(var x = 0; x < canvas.width; x = x+60){
+         for(var y = 0; y < canvas.height; y = y+160){
+            context.fillStyle= "pink";
+            context.fillRect(x+30, y+40, 15, 40); //사각형 크기 x 좌표,  y좌표, 너비, 길이
+         }
+      }
+        }
+//      for(var x = 0; x< canvas.width; x = w+60){
+//         for(var y = 0; y < canvas.height; y = y+)
+//      }
+
+        var animateInterval = setInterval(animate, 70);
+        object.style.animationTimingFunction = "ease-in-out";//속도//
+      ctx.canvas.addEventListener('click', function (event) {
+       var dataURL = canvas.toDataURL('image/png');
+       button.href = dataURL;
+        });
+   </script>
+       <br><audio autoplay controls> <source src="music.mp3" type="audio/mp3"> </audio>
+       <br>
+       <br>음악 재생 후 감상해주세요!
+       <br>
+       <br><h2>코시국 클럽에 오신 것을 환영합니다!</h2>
+       <br>코시국 때문에 즐기지도 못하고 보내버린 1년, 피끓어야할 청춘들을 억압하고 있는 코시국.. 
+       <br>피끓는 여러분들을 위해 소소하게나마 위로 해드리고자 코시국 클럽을 개장했습니다. 
+       <br>잠시나마 즐거우시길 바랍니다. 
+       <br>감사합니다. 
+       <br>
+       <br>만든 이 : 3조 송해미 김예주
+
+
+</body>
+</html>
